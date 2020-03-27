@@ -21,6 +21,7 @@ s=requests.get(url).content
 d =pd.read_csv(io.StringIO(s.decode('utf-8')))
 model = LinearRegression()
 today = datetime.datetime.today().strftime("%B %d, %Y")
+plt.rcParams.update({'font.size': 30})
 for data_type in ('cases', 'deaths'):
   legends = []
   plt.figure(figsize=(20,15))
@@ -57,6 +58,6 @@ for data_type in ('cases', 'deaths'):
     plt.ylabel('Percent growth (diff/ number confirmed)')
     plt.grid()
     plt.ylim([0, .5])
-  plt.legend(legends, fontsize=20)
-  plt.title('Logistic Model Predictions of %s for %s' % (data_type, today), fontsize=20)
+  plt.legend(legends)
+  plt.title('Logistic Model Predictions of %s for %s' % (data_type, today), fontsize=50)
   plt.savefig('%s.png' % data_type)

@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Logistic Regression Modeling For Covid
+This is a simple way of predicting the total number of deaths or cases by assuming that the growth in these numbers will follow a logistic growth curve.
 
-You can use the [editor on GitHub](https://github.com/ardila/covid_logistic/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Virtually every major epidemic has resulted in growth curves that look like this (even in some cases where there is under-testing), and every country has been roughly following this pattern so far.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+One simple way to fit this model is to plot the number on the x axis and the percent growth from the previous point on the y axis. For a perfect logistic curve this relationship will be linear. So then I fit a line to the resulting points and project out to where the growth rate eventually falls to 0, indicating the total number has plateaued. I take that number as the prediction. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ardila/covid_logistic/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This model is not likely to work well when the total number is still small, so  am focusing on countries that have reported more than 100 deaths.
+![Image](deaths.png)
+![Image](cases.png)

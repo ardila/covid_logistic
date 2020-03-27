@@ -12,8 +12,7 @@ This model is not likely to work well when the total number is still small, so  
 
 For a good primer on Logistic Growth, see this great [video by 3Blue1Brown](https://www.youtube.com/watch?v=Kas0tIxDvrg)
 
-I will be updating this data daily using [this colab](https://colab.research.google.com/drive/12g8pgy-KfQmAzToFC33JWS2zgincoire)
-
+I will be updating this data daily using the code in this Github repo.
 Caveats:
 1. There is likely to be a second increase in cases after the summer.
 2. If there is a huge change in policy or approach to managing the pandemic (people stop social distancing), then the model will most likely underpredict massively. Predictions from this model should never be used to justify ceasing effective preventative measures like social distancing.

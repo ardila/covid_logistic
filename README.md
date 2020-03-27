@@ -3,7 +3,7 @@ This is a simple way of predicting the total number of deaths or cases by assumi
 
 Virtually every major epidemic has resulted in growth curves that look like this (even in some cases where there is under-testing), and every country has been roughly following this pattern so far.
 
-These results will be updated at midnight pacific time every day by pulling data from [JHU's github repo](https://github.com/CSSEGISandData/COVID-19), and with more data, the predictions will improve.
+These results will be updated at midnight pacific time every day by pulling [data from Johns Hopkins](https://github.com/CSSEGISandData/COVID-19), and with more data, the predictions will improve.
 
 ## Deaths
 ![Image](deaths.png)

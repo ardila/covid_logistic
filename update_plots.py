@@ -25,7 +25,7 @@ plt.rcParams.update({'font.size': 30})
 for data_type in ('cases', 'deaths'):
     legends = []
     plt.figure(figsize=(20, 15))
-    for country, color in (('Italy', 'r'), ('US', 'b'), ('China', 'g'), ('Iran', 'y'), ('Spain', 'purple'), ('Korea, South', 'black'), ('United Kingdom', 'pink')):
+    for country, color in (('Italy', 'r'), ('US', 'b'), ('China', 'g'), ('Iran', 'y'), ('Spain', 'purple'), ('Korea, South', 'black'), ('Germany', 'pink')):
         def filter(x):
             return country == x['Country/Region']
         selected_data = d[d.apply(filter, axis=1)]

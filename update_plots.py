@@ -34,13 +34,13 @@ for data_type in ('cases', 'deaths'):
         selected_data_confirmed_cases = selected_data.iloc[:, 4:].sum(axis=0)
         if data_type == 'deaths':
             last_zero_day = np.argwhere(selected_data_deaths.values < 50).max()
-            start = -6
+            start = -7
             xdata = selected_data_deaths.values[start:]
             ydata = selected_data_deaths.diff(
             ).values[start:]/selected_data_deaths.values[start-1:-1]
         elif data_type == 'cases':
             last_zero_day = np.argwhere(selected_data_deaths.values < 50).max()
-            start = -6
+            start = -7
             xdata = selected_data_confirmed_cases.values[start:]
             ydata = selected_data_confirmed_cases.diff(
             ).values[start:]/selected_data_confirmed_cases.values[start-1:-1]

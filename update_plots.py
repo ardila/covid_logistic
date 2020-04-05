@@ -46,7 +46,7 @@ for data_type in ('cases', 'deaths'):
             ).values[start:]/selected_data_confirmed_cases.values[start-1:-1]
         plt.scatter(xdata, ydata, color=color)
 
-        model.fit(xdata.reshape((-1, 1))[-7:], ydata[-7:], sample_weight=xdata)
+        model.fit(xdata.reshape((-1, 1))[-7:], ydata[-7:], sample_weight=xdata[-7:])
         x_intercept = -model.intercept_/model.coef_
         if x_intercept < 0:
             x_intercept = 'TOO NOISY'

@@ -54,7 +54,7 @@ for data_type in ('cases', 'deaths'):
             x_intercept = 'TOO NOISY'
         if x_intercept < 0:
             x_intercept = 'TOO NOISY'
-        info = "Predicted total %s in %s: %s" % (
+        info = "7 day logistic trend: Predicted total %s in %s: %s" % (
             data_type, country, x_intercept)
         print(info)
         legends.append(info)

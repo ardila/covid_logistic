@@ -48,10 +48,14 @@ for data_type in ('cases', 'deaths'):
 
         model.fit(xdata.reshape((-1, 1))[-7:], ydata[-7:], sample_weight=xdata[-7:])
         x_intercept = -model.intercept_/model.coef_
+        try:
+            x_intercept = int(np.round(x_intercept[0]))
+        except:
+            x_intercept = 'TOO NOISY'
         if x_intercept < 0:
             x_intercept = 'TOO NOISY'
         info = "Predicted total %s in %s: %s" % (
-            data_type, country, int(np.round(x_intercept[0])))
+            data_type, country, x_intercept)
         print(info)
         legends.append(info)
         # if x_intercept > 0:

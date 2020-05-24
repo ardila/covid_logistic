@@ -52,8 +52,6 @@ for data_type in ('cases', 'deaths'):
             x_intercept = int(np.round(x_intercept[0]))
         except:
             x_intercept = 'TOO NOISY'
-        if x_intercept < 0:
-            x_intercept = 'TOO NOISY'
         info = "Predicted total %s in %s: %s" % (
             data_type, country, x_intercept)
         print(info)

@@ -62,7 +62,7 @@ for data_type in ("cases", "deaths"):
         plt.scatter(xdata, ydata, color=color)
 
         model.fit(
-            xdata.reshape((-1, 1))[-14:], ydata[-14:], sample_weight=xdata[-14:]
+            xdata.reshape((-1, 1))[-14:], ydata[-14:], 
         )
         x_intercept = -model.intercept_ / model.coef_
         try:
